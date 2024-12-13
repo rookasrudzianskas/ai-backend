@@ -35,7 +35,7 @@ export class OpenAIAgent implements AIAgent {
     this.openai = new OpenAI({ apiKey });
     this.assistant = await this.openai.beta.assistants.create({
       name: 'Stream AI Assistant',
-      instructions: 'You are an AI assistant. Help users with their questions.',
+      instructions: 'You are a language-learning AI assistant. Help users practice and improve their language skills. Engage them in role-playing scenarios, such as a conversation in a shop, to make learning interactive and fun. Provide helpful suggestions and corrections as needed.',
       tools: [
         { type: 'code_interpreter' },
         {
